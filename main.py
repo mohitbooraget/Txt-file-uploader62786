@@ -23,14 +23,14 @@ import re
 import os
 
 bot = Client("bot",
-             bot_token= "6535968101:AAFO4BnJlqGM5-EZ_h4XO7YXufbjsdq1JQw",
-             api_id= 20200825,
-             api_hash= "7e7f93e266c390d9cc5c2bffbe921e36")
+             bot_token= "6746685801:AAENKgXlgiWhxD4EmhRjrtH0ieiMARrwTm4",
+             api_id= 23291931,
+             api_hash= "4b11dd648188731fb7c9bc8083e8791c")
 
 
 @bot.on_message(filters.command(["start"]) & filters.user(ADMINS))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text(f"Hello [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nPress /TXT")
+    editable = await m.reply_text(f"Hello [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nPress 𝙃𝙞𝙙𝙙𝙚𝙣 Command")
 
 
 @bot.on_message(filters.command("stop") & filters.user(ADMINS))
@@ -39,7 +39,7 @@ async def restart_handler(_, m):
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
-@bot.on_message(filters.command(["TXT"]) & filters.user(ADMINS))
+@bot.on_message(filters.command(["mendaxssc"]) & filters.user(ADMINS))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text(f"**Hey [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nSend txt file**")
     input: Message = await bot.listen(editable.chat.id)
@@ -118,7 +118,7 @@ async def account_login(bot: Client, m: Message):
     else:
         CR = raw_text3
 
-    await editable.edit("Now send the **Thumb url**\nEg : ```https://telegra.ph/file/0633f8b6a6f110d34f044.jpg```\n\nor Send `no`")
+    await editable.edit("Now send the **Thumb url**\nEg : ```https://graph.org/file/f4d4a6e3ed00365fed281.jpg```\n\nor Send `no`")
     input6 = message = await bot.listen(editable.chat.id)
     raw_text6 = input6.text
     await input6.delete(True)
@@ -197,7 +197,7 @@ async def account_login(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    prog = await m.reply_text(f"**Downloading:-**\n\n** Video Name :-** `{name}\nQuality - {raw_text2}`\n**link:**`{url}`\n\n **bot made by JAIDEEP**")
+                    prog = await m.reply_text(f"**Downloading:-**\n\n** Video Name :-** `{name}\nQuality - {raw_text2}`\n**link:**`{url}`\n\n **bot made by MENDAX**")
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
                     await prog.delete(True)
